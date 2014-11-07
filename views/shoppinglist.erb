@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List</title>
+</head>
+<body>
+<ul>
+<% for item in @shoppinglist %>
+	<li><%= item.quantity %> <%= item.unit %> of <%= item.name %></li>
+<% end %>
+</ul>
+</body>
+</html>

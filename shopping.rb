@@ -1,4 +1,5 @@
 require "sinatra"
+require_relative "./lib/item.rb"
 
 get "/" do
 	@hello =  "hello world"
@@ -21,4 +22,11 @@ get "/items" do
 	erb :items
 end
 
+get "/shoppinglist" do
+	@shoppinglist = [
+		Item.new("Sugar", 2, "Kgs"),
+		Item.new("Eggs", 1, "Tray"),
+		Item.new("Soap", 3, "Bars")]
 
+		erb :shoppinglist
+end
